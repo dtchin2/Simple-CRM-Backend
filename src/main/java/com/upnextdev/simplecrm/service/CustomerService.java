@@ -17,4 +17,8 @@ public class CustomerService {
 	public List<CustomerEntity> getAllCustomersFromDB(){
 		return customerRepository.findAll();
 	}
+	
+	public CustomerEntity getCustomerByEmail(String email){
+		return customerRepository.findByCustomerEmail(email);
+	}
 }
